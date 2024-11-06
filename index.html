@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ztrigames - Tienda de Videojuegos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+
+    <!-- Cabecera -->
+    <header>
+        <div class="logo">
+            <h1>Ztrigames</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#categorias">Categorías</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#carrito">Carrito (0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <h2>Bienvenido a Ztrigames</h2>
+        <p>Encuentra las mejores ofertas en videojuegos y consolas</p>
+        <button onclick="scrollToSection('productos')">Ver Productos</button>
+    </section>
+
+    <!-- Productos -->
+    <section id="productos" class="productos">
+        <h2>Productos Destacados</h2>
+        <div class="producto" onclick="addToCart('Juego PS5 - Aventura Épica', 199)">
+            <img src="ps5-game.jpg" alt="Juego PS5">
+            <h3>Juego PS5: Aventura Épica</h3>
+            <p>Precio: S/ 199.00</p>
+            <button>Comprar</button>
+        </div>
+        <div class="producto" onclick="addToCart('Juego PS4 - Acción Total', 149)">
+            <img src="ps4-game.jpg" alt="Juego PS4">
+            <h3>Juego PS4: Acción Total</h3>
+            <p>Precio: S/ 149.00</p>
+            <button>Comprar</button>
+        </div>
+    </section>
+
+    <!-- Categorías -->
+    <section id="categorias" class="categorias">
+        <h2>Categorías de Productos</h2>
+        <div class="categoria">
+            <h3>PS5</h3>
+            <p>Descubre nuestros juegos y accesorios para PS5.</p>
+        </div>
+        <div class="categoria">
+            <h3>PS4</h3>
+            <p>Encuentra tus juegos favoritos para PS4.</p>
+        </div>
+        <div class="categoria">
+            <h3>Xbox</h3>
+            <p>Explora la selección de juegos para Xbox.</p>
+        </div>
+        <div class="categoria">
+            <h3>PC</h3>
+            <p>Explora la selección de juegos para Pc.</p>
+        </div>
+        <div class="categoria">
+            <h3>Nintendo</h3>
+            <p>Explora la selección de juegos para Nintendo.</p>
+        </div>
+    </section>
+
+    <!-- Carrito -->
+    <section id="carrito" class="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="cartItems"></ul>
+        <p>Total: S/ <span id="cartTotal">0</span></p>
+        <button onclick="checkout()">Proceder al Pago</button>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contacto">
+        <h2>Contáctanos</h2>
+        <p>Email: contacto@ztrigames.com</p>
+        <p>Teléfono: +51 982 401 094</p>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Ztrigames. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Ztrigames</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <h1>Ztrigames</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="#categorias">Categorías</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#carrito">Carrito (0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Filtros de productos -->
+    <section class="filtros">
+        <h2>Filtrar Productos</h2>
+        <select id="filtroCategoria" onchange="filterProducts()">
+            <option value="todos">Todos</option>
+            <option value="ps5">PS5</option>
+            <option value="ps4">PS4</option>
+            <option value="xbox">Xbox</option>
+            <option value="ps4">Pc</option>
+            <option value="xbox">Nintendo</option>
+            
+        </select>
+        <select id="filtroPrecio" onchange="filterProducts()">
+            <option value="todos">Todos los Precios</option>
+            <option value="menos-100">Menos de S/ 100</option>
+            <option value="100-200">S/ 100 - S/ 200</option>
+            <option value="mas-200">Más de S/ 200</option>
+        </select>
+    </section>
+
+    <!-- Lista de Productos -->
+    <section class="lista-productos" id="lista-productos">
+        <h2>Todos los Productos</h2>
+        <div class="producto" data-categoria="ps5" data-precio="199">
+            <img src="images/dbsz.jpg" alt="Juego PS5">
+            <h3>Juego PS5: Dragon Ball Sparking Zero</h3>
+            <p>Precio: S/ 199.00</p>
+            <button onclick="addToCart('Juego PS5: Dragon Ball Sparking Zero', 199)">Comprar</button>
+        </div>
+        <div class="producto" data-categoria="ps4" data-precio="149">
+            <img src="images/gow3.jpg" alt="Juego PS4">
+            <h3>Juego PS4: God Of War III</h3>
+            <p>Precio: S/ 149.00</p>
+            <button onclick="addToCart('Juego PS4: God Of War III', 149)">Comprar</button>
+        </div>
+        <div class="producto" data-categoria="ps4" data-precio="149">
+            <img src="images/minecraft.jpg" alt="Juego PC">
+            <h3>Juego PC: Minecraft Java & Bedrock</h3>
+            <p>Precio: S/ 250.00</p>
+            <button onclick="addToCart('Juego PC: Minecraft Java & Bedrock', 250)">Comprar</button>
+        </div>
+        <div class="producto" data-categoria="ps4" data-precio="149">
+            <img src="images/gears5.jpg" alt="Juego Xbox">
+            <h3>Juego Xbox: Gears 5</h3>
+            <p>Precio: S/ 80.00</p>
+            <button onclick="addToCart('Juego PC: Minecraft Java & Bedrock', 80)">Comprar</button>
+        </div>
+        <div class="producto" data-categoria="ps4" data-precio="149">
+            <img src="images/smm2.jpg" alt="Juego Nintendo">
+            <h3>Juego Nintendo: Super Mario Maker 2</h3>
+            <p>Precio: S/ 150.00</p>
+            <button onclick="addToCart('Juego Nintendo: Super Mario Maker 2', 150)">Comprar</button>
+        </div>
+        <!-- Agregar más productos según sea necesario -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ztrigames. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
